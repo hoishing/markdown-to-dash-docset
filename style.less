@@ -1,0 +1,166 @@
+// out: output/style.css
+
+@mono-font: PT Mono, monospace;
+@blue: hsl(190, 100%, 50%);
+// @blue: hsl(190, 80%, 50%);
+@inline-code: hsl(302, 35%, 54%);
+@text: hsl(0,0%,20%);
+@text-title: hsl(0, 0%, 35%);
+@text-subtitle: hsl(0, 0%, 30%);
+@text-list: hsl(0, 0%, 60%);
+@line-height: 1.5em;
+@bg-grey: hsl(0, 0%, 97%);
+@bg-grey-dark: hsl(0, 0%, 94%);
+@bg-grey-darker: hsl(0, 0%, 92%);
+@h-margin: 1em 0 1em 0;
+@dim: hsl(0, 0%, 44%);
+@corner: 4px;
+@pink-link: hsl(327, 100%, 60%);
+@blue-link: hsl(200, 100%, 50%);
+
+@font-face {
+  font-family: "PT Mono";
+  src: url(PTMono-Regular.woff);
+}
+
+
+body{
+    font-family: @mono-font;
+    padding: 0;
+    margin: 0;
+}
+
+.main {
+    padding: 0 2em 2em 2em;
+    color: @text;
+    line-height: @line-height;
+    background-color: @bg-grey;
+    margin: 0;
+}
+
+p > code, blockquote code {
+    color: @inline-code;
+    background: @bg-grey-darker;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 0 .4em 0 .4em;
+    margin: 0 .2em 0 .2em;
+    border-radius: 3px;
+}
+
+.codehilite {
+    padding: .2em 1em .2em 1em;
+    border-radius: 0.5em;
+    span {
+        font-family: @mono-font;
+    }
+}
+
+.left-bar(@width: @corner) {
+    border-left-style: solid;
+    border-color: @blue;
+    border-width: @width;
+}
+
+h1 {
+    color: @text-title;
+    background-color: @bg-grey-dark;
+    padding: .8em;
+    padding-left: 1em;
+    .left-bar;
+    margin: @h-margin;
+    border-radius: @corner;
+    &:first-child { margin-top: 0 }
+}
+
+h2 {
+    padding-left: .5em;
+    padding-bottom: .3em;
+    border-bottom-style: solid;
+    border-color: @bg-grey-dark;
+    border-width: 2px;
+    margin: @h-margin;
+    color: @text-title;
+}
+
+h3 { color: @text-subtitle }
+
+.dark-edge {
+    padding: 2em;
+    background-color: hsl(0, 0%, 26%);
+}
+
+.a (@color: @dim) {
+    a {
+        color: @color;
+        text-decoration: none;
+    }
+    a:visited {color: @color }
+    a:hover {color: @color }
+    a:active {color: @color }
+}
+
+
+.navi {
+    display: flex;
+    background-color: @bg-grey;
+    padding: 2em;
+    div {
+        // margin: 2px;
+        background-color: @blue-link;
+        border-radius: @corner * 4;
+        .a(white);
+        a {
+            display: inline-block;
+            white-space: nowrap;
+            padding: .3em 1em .3em 1em;
+        }
+        &.prev {
+            // text-align: left;
+            a::before { content: '< ' }
+            // a::after { content: ' |'}
+        }
+        &.next {
+            // text-align: right;
+            a::after{ content: ' >' }
+            // a::before{ content: '| '}
+        }
+        &.idx { margin: 0 .5em 0 .5em }
+    }
+}
+
+.footer {
+    color: @dim;
+    .dark-edge;
+    .a;
+    a { text-decoration: underline }
+}
+
+.header {
+    h1 {
+        margin: .5em;
+        .left-bar(@corner * 2);
+    }
+    .dark-edge;
+    color: @bg-grey-darker;
+}
+
+.toc{
+    // margin-left: 1em;
+    li{
+        color: @text-list;
+        .a(@blue-link);
+        padding: .5em 1em .5em 1em;
+        // margin-left: -2em;
+        &:nth-child(even) {
+            background-color: @bg-grey-dark;
+            border-radius: @corner;
+        }
+    }
+}
+
+.author {
+    padding: 2em 3em 1.5em 3em;
+    .a(@pink-link);
+}

@@ -1,0 +1,18 @@
+bookname : Book Name
+author : Author Name
+author_url : http://author_url.com
+source : http://github.com/user_name/project
+license : CC4.0
+license_url : http://creativecommons.org/licenses/by-nc/4.0/
+pkg_name: &pkg_name es6
+
+dashing:
+  name: *pkg_name
+  package: *pkg_name
+  index: index.html
+  selectors:
+    h1: Class
+    h2: Component
+    h3: Attribute
+  icon32x32: icon.png
+  allowJS: true
