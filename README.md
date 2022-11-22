@@ -6,15 +6,15 @@ This python utils was created for converting ebook written in markdown to HTML f
 
 ## Tooling
 
-- jupyter in vscode for exploratory dev style
-- YAML for configuration
+- [Jupyter in VSCode](https://code.visualstudio.com/docs/python/jupyter-support-py) for exploratory dev style
+- [YAML](https://pyyaml.org/) for configuration
 - [Pygments](https://pygments.org/) as syntax highlighter
 - [less css](https://lesscss.org/) as css preprocessor
 - [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/) for manipulating HTML elements (insert, append...etc)
 
 After creating the HTML files, generate Dash docset with [dashing](https://github.com/technosophos/dashing) CLI.
 
-# Required Python Packages
+## Required Python Packages
 
 ```toml
 bs4 = "^0.0.1"
@@ -24,7 +24,7 @@ jupyter = "^1.0.0"
 lesscpy = "^0.15.1"
 ```
 
-# Usage
+## Usage
 
 - put markdown files in `src` folder
 - edit config.yaml to suit your package
