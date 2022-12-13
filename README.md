@@ -6,7 +6,7 @@
 
 This python utils was created for converting ebook written in markdown to HTML files, that are suitable for generating Dash docset later on. It's written in jupyter format for easy debugging and exploratory coding. So you have to run with VSCode instead of running directly with python.
 
-## Tooling
+## Tech Details
 
 🔗 [source code](https://github.com/hoishing/markdown-to-dash-docset)
 
@@ -18,9 +18,9 @@ This python utils was created for converting ebook written in markdown to HTML f
 
 After creating the HTML files, generate Dash docset with [dashing](https://github.com/technosophos/dashing) CLI.
 
-## Required Python Packages
+### Python Packages
 
-```toml
+```js
 bs4 = "^0.0.1"
 pyyaml = "^6.0"
 markdown2 = "^2.4.6"
