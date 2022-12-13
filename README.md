@@ -1,6 +1,6 @@
 # Markdown to Dash Docset
 
-🔗 [source code](https://github.com/hoishing/markdown-to-dash-docset)
+[![GitHub](https://img.shields.io/github/license/hoishing/markdown-to-dash-docset)](https://opensource.org/licenses/MIT)
 
 [Dash](https://kapeli.com/dash) was my favorite documentation app on macOS. Besides reading tech docs, I also use it for reading tech books due to its handy search functionalities.
 
@@ -8,7 +8,9 @@ This python utils was created for converting ebook written in markdown to HTML f
 
 ## Tooling
 
-- [Jupyter in VSCode](https://code.visualstudio.com/docs/python/jupyter-support-py) for exploratory dev style
+🔗 [source code](https://github.com/hoishing/markdown-to-dash-docset)
+
+- [Jupyter in VSCode](https://code.visualstudio.com/docs/python/jupyter-support-py) for exploratory programming
 - [YAML](https://pyyaml.org/) for configuration
 - [Pygments](https://pygments.org/) as syntax highlighter
 - [less css](https://lesscss.org/) as css preprocessor
@@ -35,3 +37,7 @@ lesscpy = "^0.15.1"
 - in terminal
   - cd output
   - run `dashing build <package_name>`
+
+## Need Help?
+
+Open a [github issue](https://github.com/hoishing/markdown-to-dash-docset/issues) or ping me on [Twitter](https://twitter.com/hoishing) ![](https://api.iconify.design/logos/twitter.svg?width=20)
